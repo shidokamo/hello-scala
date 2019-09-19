@@ -20,11 +20,19 @@ class ClassCwithLazy extends TraitBwithLazy {
   def print(): Unit = println(bar)
 }
 
+class ClassCwithDef extends {
+  val foo = "Hello"
+} with TraitB {
+  def print(): Unit = println(bar)
+}
+
 object Main {
   def main(args: Array[String]): Unit = {
     val c = new ClassC
     c.print()
     val c_lazy = new ClassCwithLazy
     c_lazy.print()
+    val c_def = new ClassCwithDef
+    c_def.print()
   }
 }
