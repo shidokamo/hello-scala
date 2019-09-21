@@ -15,5 +15,8 @@ object Main {
     println(
       new Function2[Int, Int, Int]{ def apply(x: Int, y: Int): Int = x + y }.apply(100, 200)
     )
+    println(
+      (new Function2[Int, Int, Int]{ def apply(x: Int, y: Int): Int = x + y })(100, 200)
+    )
   }
 }
